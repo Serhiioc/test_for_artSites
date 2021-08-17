@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test page</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top menu--active">
+            <div class="container header-top__container">
+                <div class="logo">
+                    <a class="logo__link" href="index.html">
+                        <img class="logo__image" src="./img/logo.png" alt="best company" width="273px" height="100px">
+                    </a>
+                </div>
+                <div class="contact header__contact">
+                    <a class="contact__link" href="tel:+74997777777">+7(499) 777-77-77</a>
+                    <a class="contact__link" href="tel:+74997777777">+7(499) 777-77-77</a>
+                    <button class="button contact__button">Обратная связь</button>
+                </div>
+            </div>
+        </div>
+        <div class="header__menu menu">
+            <div class="container menu__container">
+                <nav class="nav menu__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="./index.html">главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">каталог</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">доставка и оплата</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">прайс-лист</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="humburger-menu header__humburger-menu">
+            <button class="humburger-menu__button">menu</button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="slider">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./img/slayd_1_254.png" alt="slide_1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="./img/slide_2.jpg" alt="slide_2">
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="container slider__container">
+                    <div class="swiper-button-prev">
+                        <img src="./img/arrow_left.png" alt="arrow">
+                    </div>
+                    <div class="swiper-button-next"> <img src="./img/arrow_right.png" alt="arrow">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="breadcrumbs">
+            <div class="container breadcrumbs__container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Каталог</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">Бытовая техника</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container catalog__container">
+                <div class="catalog__navigation">
+                    <ul class="catalog__list">
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="">автомобили</a>
+                        </li>
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="">бытовая техника</a>
+                            <ul class="catalog__sub-list">
+                                <li class="catalog__sab-item">
+                                    <a class="catalog__link" href="">микроволновки</a>
+                                </li>
+                                <li class="catalog__sab-item">
+                                    <a class="catalog__link" href="">холодильники</a>
+                                </li>
+                                <li class="catalog__sab-item">
+                                    <a class="catalog__link" href="">посудомоечные машины</a>
+                                </li>
+                                <li class="catalog__sab-item">
+                                    <a class="catalog__link" href="">чайники</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="">мобильная техника</a>
+                        </li>
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="">компьютеры</a>
+                        </li>
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="">одежда</a>
+                        </li>
+                        <li class="catalog__item">
+                            <a class="catalog__link" href="">недвижимость</a>
+                        </li>
+                    </ul>
+                    <div class="catalog__price-list">
+                        <img class="catalog__img" src="./img/price_list.png" alt="price-list">
+                        <a href="#" download="#" title="download price-list">прайс-лист</a>
+                    </div>
+                </div>
+                <div class="catalog__gallery">
+                    <div class="card catalog__card">
+                        <div class="card__picture">
+                            <img class="card__image" src="./img/card.jpg" alt="product">
+                        </div>
+                        <h2 class="card__title">Самый клевый чайник, который надо купить!</h2>
+                        <div class="card__inner">
+                            <p class="card__price">1900 &#x20bd</p>
+                            <button class="card__button">
+                                <img src="./img/basket.png" alt="basket">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card catalog__card">
+                        <div class="card__picture">
+                            <img class="card__image" src="./img/card.jpg" alt="product">
+                        </div>
+                        <h2 class="card__title">Самый клевый чайник, который надо купить!</h2>
+                        <div class="card__inner">
+                            <p class="card__price">1900 &#x20bd</p>
+                            <button class="card__button">
+                                <img src="./img/basket.png" alt="basket">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card catalog__card">
+                        <div class="card__picture">
+                            <img class="card__image" src="./img/card.jpg" alt="product">
+                        </div>
+                        <h2 class="card__title">Самый клевый чайник, который надо купить!</h2>
+                        <div class="card__inner">
+                            <p class="card__price">1900 &#x20bd</p>
+                            <button class="card__button">
+                                <img src="./img/basket.png" alt="basket">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card catalog__card">
+                        <div class="card__picture">
+                            <img class="card__image" src="./img/card.jpg" alt="product">
+                        </div>
+                        <h2 class="card__title">Самый клевый чайник, который надо купить!</h2>
+                        <div class="card__inner">
+                            <p class="card__price">1900 &#x20bd</p>
+                            <button class="card__button">
+                                <img src="./img/basket.png" alt="basket">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card catalog__card">
+                        <div class="card__picture">
+                            <img class="card__image" src="./img/card.jpg" alt="product">
+                        </div>
+                        <h2 class="card__title">Самый клевый чайник, который надо купить!</h2>
+                        <div class="card__inner">
+                            <p class="card__price">1900 &#x20bd</p>
+                            <button class="card__button">
+                                <img src="./img/basket.png" alt="basket">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="catalog__pagination">
+                        <span class="catalog__num">1</span>
+                        <span class="catalog__num">2</span>
+                        <span class="catalog__num">3</span>
+                        <span class="catalog__num">4</span>
+                        <span class="catalog__num">5</span>
+                        <span class="catalog__num">6</span>
+                        <span class="catalog__num">7</span>
+                    </div>
+                    <div class="desc catalog__desc">
+                        <article class="desc__article">Компания «Пиксель Плюс» существует более 6 лет, за это время мы
+                            принимали участие в разработке более чем 700 сайтов, поэтому можем уверенно называть себя
+                            профессионалами. На данный момент наш коллектив состоит из более чем 30 сотрудников
+                            работающих в двух офисах в Москве и Зеленограде.характерные для этого жанра мотивы:
+                            неразделённой любви, ухода молодости, угасания души.</article>
+                        <article class="desc__article">Одним из основных направлений работ нашей компании является
+                            поисковое продвижение сайтов, на данной момент мы работаем с более чем 150 постоянными
+                            клиентами по более чем 11 000 поисковым запросам. При этом в работе основной акцент мы
+                            делаем на качестве работ, а так же применяем собственные уникальные разработки в области SEO
+                            продвижения. На данный момент отдел SEO состоит из 9 человек под руководством ведущего
+                            специалиста, преимущественно работающих в нашем московском офисе.</article>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__contacts">
+                    <p class="footer__copyright">&#169 2012–2013 ЗАО «Компания»</p>
+                    <a class="footer__mail" href="mailto:info@name.ru">info@name.ru</a>
+                </div>
+                <div class="footer__menu">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__link" href="./index.html">Главная</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="">Каталог</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="">Доставка и оплата</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="">Прайс-лист</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__logo">
+                    <img src="./img/logo-company.png" alt="best IT company">
+                    <a href="https://art-sites.org" target="_blank" title="best IT company"><span>Разработка
+                            сайта</span>
+                        компания «Art-Sites»
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <div class="modale">
+        <form class="form js-form" action="./php/mail.php" method="POST">
+            <legend class="form__legend">Обратная связь</legend>
+            <label class="form__label" for="text">Ваше имя *</label>
+            <input class="form__input" type="text" name="user-name" required data-validate-field="name">
+            <label class="form__label" for="phone">Телефон *</label>
+            <input class="form__input phone" type="tel" name="user-phone" required data-validate-field="phone">
+            <label class="form__label" for="email">Email *</label>
+            <input class="form__input" type="email" name="user-email" required data-validate-field="email">
+            <label class="form__label" for="message">message</label>
+            <textarea class="form__input form__textarea" name="user-message"></textarea>
+            <input class="form__button" type="submit" value="отправить">
+            <button class="form__close"></button>
+        </form>
+
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/just-validate.min.js"></script>
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
