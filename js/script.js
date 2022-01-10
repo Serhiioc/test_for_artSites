@@ -128,6 +128,8 @@ window.addEventListener("click", function (evt) {
     } 
 });
   
+
+// * burger menu
 $burgerButton.addEventListener("click", function () {
        $burgerMenu.classList.toggle("menu--active");
        $header.classList.toggle("menu--active"); 
