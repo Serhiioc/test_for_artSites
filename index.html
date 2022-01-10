@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test page</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -23,7 +22,7 @@
                 <div class="contact header__contact">
                     <a class="contact__link" href="tel:+74997777777">+7(499) 777-77-77</a>
                     <a class="contact__link" href="tel:+74997777777">+7(499) 777-77-77</a>
-                    <button class="button contact__button">Обратная связь</button>
+                    <button class="contact__button">Обратная связь</button>
                 </div>
             </div>
         </div>
@@ -56,26 +55,16 @@
     </header>
     <main class="main">
         <section class="slider">
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="./img/slayd_1_254.png" alt="slide_1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="swiper-img" src="./img/slide_2.jpg" alt="slide_2">
-                    </div>
+            <div class="slider__wrapper">
+                    <img class="slide" src="./img/slide_1.jpg" alt="slide_1">
+                    <img class="slide" src="./img/slide_2.jpg" alt="slide_2">
+            </div>
+            <div class="container slider__container">
+                <div class="button button__prev">
+                    <img src="./img/arrow_left.png" alt="prev slide">
                 </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="container slider__container">
-                    <div class="swiper-button-prev">
-                        <img src="./img/arrow_left.png" alt="arrow">
-                    </div>
-                    <div class="swiper-button-next"> <img src="./img/arrow_right.png" alt="arrow">
-
-                    </div>
+                <div class="button button__next"> 
+                    <img src="./img/arrow_right.png" alt="next slide">
                 </div>
             </div>
         </section>
@@ -99,36 +88,36 @@
                 <div class="catalog__navigation">
                     <ul class="catalog__list">
                         <li class="catalog__item">
-                            <a class="catalog__link" href="">автомобили</a>
+                            <a class="catalog__link" href="#">автомобили</a>
                         </li>
                         <li class="catalog__item">
-                            <a class="catalog__link" href="">бытовая техника</a>
+                            <a class="catalog__link" href="#">бытовая техника</a>
                             <ul class="catalog__sub-list">
                                 <li class="catalog__sab-item">
-                                    <a class="catalog__link" href="">микроволновки</a>
+                                    <a class="catalog__link" href="#">микроволновки</a>
                                 </li>
                                 <li class="catalog__sab-item">
-                                    <a class="catalog__link" href="">холодильники</a>
+                                    <a class="catalog__link" href="#">холодильники</a>
                                 </li>
                                 <li class="catalog__sab-item">
-                                    <a class="catalog__link" href="">посудомоечные машины</a>
+                                    <a class="catalog__link" href="#">посудомоечные машины</a>
                                 </li>
                                 <li class="catalog__sab-item">
-                                    <a class="catalog__link" href="">чайники</a>
+                                    <a class="catalog__link" href="#">чайники</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="catalog__item">
-                            <a class="catalog__link" href="">мобильная техника</a>
+                            <a class="catalog__link" href="#">мобильная техника</a>
                         </li>
                         <li class="catalog__item">
-                            <a class="catalog__link" href="">компьютеры</a>
+                            <a class="catalog__link" href="#">компьютеры</a>
                         </li>
                         <li class="catalog__item">
-                            <a class="catalog__link" href="">одежда</a>
+                            <a class="catalog__link" href="#">одежда</a>
                         </li>
                         <li class="catalog__item">
-                            <a class="catalog__link" href="">недвижимость</a>
+                            <a class="catalog__link" href="#">недвижимость</a>
                         </li>
                     </ul>
                     <div class="catalog__price-list">
@@ -275,7 +264,6 @@
         </form>
 
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/just-validate.min.js"></script>
     <script src="./js/inputmask.min.js"></script>
     <script src="./js/script.js"></script>

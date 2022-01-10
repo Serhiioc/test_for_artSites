@@ -1,39 +1,57 @@
-let mySwiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    loop: true,
-    // centeredSlides: true,
-    // centerInsufficientSlides: true,
-   
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
 
-    autoplay: {
-        delay: 4000,
-      }
-});
-const $swiper = document.querySelector('.slider');
-  
-const $slide = document.querySelectorAll('.swiper-img');
+const $prevBtn = document.querySelector('.button__prev');
+const $nextBtn = document.querySelector('.button__next');
+const $slider = document.querySelector('.slider__wrapper');
+const $container = document.querySelector('.slider');
+const $counterSlide = $slider.querySelectorAll('img').length;
 
-const slideShow = () => {
-    $slide.forEach(element => {
-        if (element.clientWidth > window.innerWidth) {
-          console.log('good');
-          $swiper.style.display = "none";
-        } 
-        });
+let activeSlideIndex = 0;
+
+let phoneFields = document.querySelector(".phone");
+let im = new Inputmask("+38 (099) 999-99-99");
+
+const $modale = document.querySelector(".modale");
+const $feedback = document.querySelector(".contact__button");
+const $formClose = document.querySelector(".form__close");
+const $burgerButton = document.querySelector(".humburger-menu__button");
+const $burgerMenu = document.querySelector(".menu");
+const $header = document.querySelector(".header-top");
+
+// * Slider
+
+$prevBtn.addEventListener('click', () => {
+    changeSlide('prev')
+})
+
+$nextBtn.addEventListener('click', () => {
+    changeSlide('next')
+})
+
+function changeSlide(direction) {
+    if(direction === 'prev') {
+        activeSlideIndex++
+        console.log($counterSlide);
+        if(activeSlideIndex === $counterSlide) {
+            activeSlideIndex = 0
+        }
+    } else if(direction === 'next'){
+        activeSlideIndex--;
+        if(activeSlideIndex < 0) {
+            activeSlideIndex = $counterSlide - 1
+        }
+    }
+    const width = $slider.querySelector('img').clientWidth;
+    $slider.style.transform = `translateX(-${activeSlideIndex * width}px)`;
 }
 
-slideShow();
-
+setInterval(function() {
+    $nextBtn.click()
+}, 4000)
 
 //* Отправка формы
 
 
-let phoneFields = document.querySelector(".phone");
-let im = new Inputmask("+38 (099) 999-99-99");
+
 im.mask(phoneFields);
 
 new JustValidate('.js-form', {
@@ -99,27 +117,16 @@ new JustValidate('.js-form', {
 });
 
 // * modale window
-
-const $modale = document.querySelector(".modale");
-const $feedback = document.querySelector(".contact__button");
     
 $feedback.addEventListener("click", function () {
     $modale.classList.add("modale--active");  
 });
-
-const $formClose = document.querySelector(".form__close");
 
 window.addEventListener("click", function (evt) {
     if(evt.target === $modale || evt.target === $formClose) {
         $modale.classList.remove("modale--active");
     } 
 });
-
-  
-const $burgerButton = document.querySelector(".humburger-menu__button");
-const $burgerMenu = document.querySelector(".menu");
-const $header = document.querySelector(".header-top");
-  
   
 $burgerButton.addEventListener("click", function () {
        $burgerMenu.classList.toggle("menu--active");

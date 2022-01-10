@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,oGAAoG;AAEpG,UAAU;EACT,WAAW,EAAE,qBAAqB;EAClC,GAAG,EAAE,kCAAkC,EAAE,gCAAgC,EACxE,4CAA4C,CAAC,cAAc;EAC5D,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM",
+    "sources": [
+        "openSansCondensed.scss"
+    ],
+    "names": [],
+    "file": "openSansCondensed.css"
+}
