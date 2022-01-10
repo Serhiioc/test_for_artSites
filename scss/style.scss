@@ -100,7 +100,7 @@
     &--active {
         animation: fade-in 2s ease-in-out 0s 1 normal forwards;
         display: block;
-        z-index: 2;
+        z-index: 1;
     }
 }
 
@@ -109,7 +109,7 @@
     right: 10px;
     top: 5px;
     display: none;
-    z-index: 2;
+    z-index: 1;
 
     @media (max-width: 600px) {
         display: block;
@@ -214,7 +214,6 @@
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        z-index: 1;
     }
 }
 .slide {
@@ -658,7 +657,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
     background-color: #8080806e;
 
     &--active {
