@@ -1,17 +1,14 @@
 
-const $prevBtn = document.querySelector('.button__prev');
-const $nextBtn = document.querySelector('.button__next');
-const $slider = document.querySelector('.slider__wrapper');
-const $container = document.querySelector('.slider');
-const $counterSlide = $slider.querySelectorAll('img').length;
-
-let activeSlideIndex = 0;
+const $prevSlideBtn = document.querySelector('.button__prev');
+const $nextSlideBtn = document.querySelector('.button__next');
+const $sliderWrap = document.querySelector('.slider__wrapper');
+// const $sliderContainer = document.querySelector('.slider');
 
 let phoneFields = document.querySelector(".phone");
 let im = new Inputmask("+38 (099) 999-99-99");
 
-const $modale = document.querySelector(".modale");
-const $feedback = document.querySelector(".contact__button");
+const $modaleForm = document.querySelector(".modale");
+const $contactBtn = document.querySelector(".contact__button");
 const $formClose = document.querySelector(".form__close");
 const $burgerButton = document.querySelector(".humburger-menu__button");
 const $burgerMenu = document.querySelector(".menu");
@@ -19,18 +16,22 @@ const $header = document.querySelector(".header-top");
 
 // * Slider
 
-$prevBtn.addEventListener('click', () => {
+let activeSlideIndex = 0;
+
+$prevSlideBtn.addEventListener('click', () => {
     changeSlide('prev')
 })
 
-$nextBtn.addEventListener('click', () => {
+$nextSlideBtn.addEventListener('click', () => {
     changeSlide('next')
 })
 
 function changeSlide(direction) {
+    const $counterSlide = $sliderWrap.querySelectorAll('img').length;
+    const width = $sliderWrap.querySelector('img').clientWidth;
+    
     if(direction === 'prev') {
         activeSlideIndex++
-        console.log($counterSlide);
         if(activeSlideIndex === $counterSlide) {
             activeSlideIndex = 0
         }
@@ -40,12 +41,11 @@ function changeSlide(direction) {
             activeSlideIndex = $counterSlide - 1
         }
     }
-    const width = $slider.querySelector('img').clientWidth;
-    $slider.style.transform = `translateX(-${activeSlideIndex * width}px)`;
+    $sliderWrap.style.transform = `translateX(-${activeSlideIndex * width}px)`;
 }
 
-setInterval(function() {
-    $nextBtn.click()
+setInterval(() => {
+    $nextSlideBtn.click()
 }, 4000)
 
 //* Отправка формы
@@ -118,13 +118,13 @@ new JustValidate('.js-form', {
 
 // * modale window
     
-$feedback.addEventListener("click", function () {
+$contactBtn.addEventListener("click", function () {
     $modale.classList.add("modale--active");  
 });
 
 window.addEventListener("click", function (evt) {
-    if(evt.target === $modale || evt.target === $formClose) {
-        $modale.classList.remove("modale--active");
+    if(evt.target === $modaleForm || evt.target === $formClose) {
+        $modaleForm.classList.remove("modale--active");
     } 
 });
   
